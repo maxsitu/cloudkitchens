@@ -31,3 +31,7 @@ Property file can be put in any path. The path of it should be declared in JVM a
 * **quota.overflow**: Shelf capacity of overflow shelf.
 * **orderTaker.meanWaitTimeMillis**: Orders are being picked up in time manner of poisson distribution. The time between each take of order is in poisson distribution. As per requirements, the mean value is 333 milliseconds (3 times a second).
 * **orderMaker.freqPerSecond**: The frequency that kitchen is producing order.
+
+## How to test
+1. Project is using JUnit to test core logic.
+1. By tuning configurations, like changing the speed of producing and consuming order, you are able to see orders being removed due to shelf out of capacity.
